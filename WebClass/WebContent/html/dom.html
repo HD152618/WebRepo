@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.myStyle{color:red;font-weight:bold;font-size:20pt;}
+</style>
+</head>
+<body>
+<p id
+<div id="div1">
+<p id="p1">원래 있던 문단</p>
+</div>
+<script>
+var newNode=document.createElement("p");
+var textNode=document.createTextNode("새로운 문단");
+newNode.appendChild(textNode);
+
+var parent=document.getElementByld("div1");
+parent.appendChild(newNode);
+
+var child=document.getElementByld("p1");
+parent.removeChild(child);
+</script>
+</body>
+</html>
