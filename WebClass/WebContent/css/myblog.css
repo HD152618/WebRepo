@@ -1,0 +1,40 @@
+#login {
+      font-size: 20px;
+      color: white;
+      margin-right: 20px;
+    }
+    #up1{
+  	font-size:30px;
+  	color:black;  
+    }
+    #up2{
+  	font-size:30px;
+  	color:black;  
+    }
+    #up3{
+  	font-size:30px;
+  	color:black;  
+    }
+    #harby{
+  font-size: 50px;
+  color:gray;
+  margin-right:30px;
+  margin-top: 50px; 
+    }
+    #likes{
+  font-size: 50px;
+  color:gray;
+  margin-right:30px;
+  margin-top: 50px; 
+    }
+    #dream{
+  font-size: 50px;
+  color:gray;
+  margin-right:30px;
+  margin-top: 50px; 
+    }
+p{
+	font-size: 15px;
+      color: white;
+      margin-right: 10px;
+}
