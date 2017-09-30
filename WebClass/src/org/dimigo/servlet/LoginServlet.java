@@ -66,8 +66,8 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			UserVo user = new UserVo();
 			user.setId(id);
-			user.setName("È«±æµ¿");
-			user.setNick("ÀÇÀû");
+			user.setName("í™ê¸¸ë™");
+			user.setNick("ì˜ì ");
 			session.setAttribute("user", user);
 			RequestDispatcher rd = request.getRequestDispatcher("jsp/home.jsp");
 			rd.forward(request, response);
