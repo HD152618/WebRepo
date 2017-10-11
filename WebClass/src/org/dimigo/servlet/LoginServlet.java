@@ -61,7 +61,7 @@ public class LoginServlet extends HttpServlet {
 		System.out.println(j);
 		out.write(j);
 		boolean result = true;
-		
+		  
 		if(result) {
 			HttpSession session = request.getSession();
 			UserVo user = new UserVo();

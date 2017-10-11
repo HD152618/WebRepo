@@ -40,7 +40,7 @@ public class BlogLoginServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
 		rd.forward(request, response);
 	}
-
+  
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

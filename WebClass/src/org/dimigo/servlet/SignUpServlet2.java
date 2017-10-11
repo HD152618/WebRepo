@@ -38,7 +38,7 @@ public class SignUpServlet2 extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("jsp/signup2.jsp");
 		rd.forward(request, response);
 	}
-
+  
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */ 

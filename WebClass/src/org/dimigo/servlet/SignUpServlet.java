@@ -50,7 +50,7 @@ public class SignUpServlet extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		String nickname = request.getParameter("nickname");
-		
+		  
 //		Gson gson = new Gson();
 //		JsonObject json = new JsonObject();
 //		json.addProperty("id",id);

@@ -1,5 +1,5 @@
 package org.dimigo.vo;
-
+  
 public class UserVo {
 	private String id;
 	private String name;
