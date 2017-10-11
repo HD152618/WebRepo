@@ -38,7 +38,7 @@ public class BlogLoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		RequestDispatcher rd = request.getRequestDispatcher("myblog/login.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
 		rd.forward(request, response);
 	}
 
@@ -52,9 +52,7 @@ public class BlogLoginServlet extends HttpServlet {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
-		boolean result = "test@naver.com".equals(id);
-		
-		if(result) {
+		if(id.equals("test@naver.com")) {
 			HttpSession session = request.getSession();
 			UserVo user = new UserVo();
 			user.setId(id);
@@ -62,7 +60,7 @@ public class BlogLoginServlet extends HttpServlet {
 			user.setName("홍길동");
 			user.setNick("의적");
 			session.setAttribute("user", user);
-			RequestDispatcher rd = request.getRequestDispatcher("myblog/home.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("jsp/home.jsp");
 			rd.forward(request, response);
 			
 		}
@@ -73,7 +71,7 @@ public class BlogLoginServlet extends HttpServlet {
 			user.setPw(pw);
 			session.setAttribute("user", user);
 			request.setAttribute("msg", "error");
-			RequestDispatcher rd = request.getRequestDispatcher("myblog/login.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
 			rd.forward(request, response);
 		}
 		
