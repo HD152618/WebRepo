@@ -24,7 +24,7 @@ import com.google.gson.JsonObject;
 public class BlogLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
+    /** 
      * @see HttpServlet#HttpServlet()
      */
     public BlogLoginServlet() {
