@@ -39,7 +39,7 @@ function menu_out(e) {
     <%-- 세션이 없는 경우 --%>
     <%
     UserVo user = (UserVo)session.getAttribute("user");
-    if(user==null) {
+    if(user==null) { 
     %>
     	<a class="text-bold text-white" style="text-decoration: none" href="/WebClass/bloglogin">Sign in</a>
     	<span class="text-bold text-white">&nbsp; or &nbsp;</span>
