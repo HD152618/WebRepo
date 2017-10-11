@@ -41,16 +41,30 @@
 				<li class="nav-item"><a class="nav-link" href="#dream">Dream</a>
 				</li>
 			</ul>
-			<div id="login">
-				<form class="form-inline my-2 my-lg-0" id="loginForm">
-					<input id="id" class="form-control mr-sm-2" type="text"
-						placeholder="ID" aria-label="ID" required> <input id="pwd"
-						class="form-control mr-sm-2" type="password" placeholder="PW"
-						aria-label="PW" required>
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">LOGIN</button>
-				</form>
-			</div>
-
+			 <%
+    UserVo user = (UserVo)(session.getAttribute("user"));
+    if(user==null) {
+    %>
+    	<a class="text-bold text-white" style="text-decoration: none" href="/WebClass/login">Sign in</a>
+    	<span class="text-bold text-white">&nbsp; or &nbsp;</span>
+    	<a class="text-bold text-white" style="text-decoration: none" href="/WebClass/signup2">Sign up</a>
+    	<%} else { %>
+    <%-- 세션이 있는 경우 --%>
+	    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+	    <li class="nav-item dropdown">
+	      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    	<%=user.getName() %>님
+	      </a>
+	      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+	      <form action="/WebClass/logout">
+	      	<button type="submit" class="dropdown-item">Sign out</button>
+	       	</form><div class="dropdown-divider"></div>
+	        <button type="button" class="dropdown-item">Action1</button>
+	        <button type="button" class="dropdown-item">Action2</button>
+	      </div>
+	    </li>
+	    </ul>
+	    <%} %>
 		</div>
 		<div class="modal" id="myModal">
 			<div class="modal-dialog" role="document">
