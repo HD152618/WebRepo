@@ -41,17 +41,33 @@
 				<li class="nav-item"><a class="nav-link" href="#dream">Dream</a>
 				</li>
 			</ul>
-			<div id="login">
-				<form class="form-inline my-2 my-lg-0" id="loginForm">
-					<input id="id" class="form-control mr-sm-2" type="text"
-						placeholder="ID" aria-label="ID" required> <input id="pwd"
-						class="form-control mr-sm-2" type="password" placeholder="PW"
-						aria-label="PW" required>
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">LOGIN</button>
-				</form>
-			</div>
+			
 
 		</div>
+		<%
+    UserVo user = (UserVo)session.getAttribute("user");
+    if(user==null) { 
+    %>
+    	<a class="text-bold text-white" style="text-decoration: none" href="/WebClass/bloglogin">Sign in</a>
+    	<span class="text-bold text-white">&nbsp; or &nbsp;</span>
+    	<a class="text-bold text-white" style="text-decoration: none" href="/WebClass/signup2">Sign up</a>
+    	<%} else { %>
+    <%-- 세션이 있는 경우 --%>
+	    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+	    <li class="nav-item dropdown">
+	      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    	<%=user.getName() %>님
+	      </a>
+	      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+	      <form action="/WebClass/bloglogout">
+	      	<button type="submit" class="dropdown-item">Sign out</button>
+	       	</form><div class="dropdown-divider"></div>
+	        <button type="button" class="dropdown-item">Action1</button>
+	        <button type="button" class="dropdown-item">Action2</button>
+	      </div>
+	    </li>
+	    </ul>
+	    <%} %>
 		<div class="modal" id="myModal">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -73,60 +89,6 @@
 			</div>
 		</div>
 
-
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<form class="form-inline my-2 my-lg-0" id="registerForm">
-
-
-
-
-						<div class="form-group">
-							<input type="text" class="form-control" id="number"
-								placeholder="번호" required>
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" id="name"
-								placeholder="이름" required>
-						</div>
-
-						<div class="row">
-							<div class="col">
-								<div class="form-group">
-									<div>
-										<input type="radio" name="grade" id="grade1" required>
-										<p>1학년</p>
-									</div>
-									<div>
-										<input type="radio" name="grade" id="grade2" required>
-										<p>2학년</p>
-									</div>
-									<div>
-										<input type="radio" name="grade" id="grade3" required>
-										<p>3학년</p>
-									</div>
-									<br>
-								</div>
-							</div>
-							<div class="col">
-								<div class="form-group">
-									<select name="list" >
-										<option value="class1">1반</option>
-										<option value="class2">2반</option>
-										<option value="class3">3반</option>
-										<option value="class4">4반</option>
-										<option value="class5">5반</option>
-										<option value="class6">6반</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
-					</form>
-				</div>
-			</div>
-		</div>
 	</nav>
 	<h1 id="title">Welcome to my Blog</h1>
 	<a id="harby">취미</a>

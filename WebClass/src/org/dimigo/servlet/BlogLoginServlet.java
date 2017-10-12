@@ -59,7 +59,7 @@ public class BlogLoginServlet extends HttpServlet {
 			user.setName("테스트케이스");
 			user.setNick("Test");
 			session.setAttribute("user", user);
-			RequestDispatcher rd = request.getRequestDispatcher("jsp/home.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("jsp/myblog.jsp");
 			rd.forward(request, response);
 			
 		}

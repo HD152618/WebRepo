@@ -67,7 +67,7 @@ public class SignUpServlet extends HttpServlet {
 			user.setNick(nickname);
 			user.setPw(pw);
 			session.setAttribute("user", user);
-			RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("jsp/myblog.jsp");
 			rd.forward(request, response);
 			
 		}
